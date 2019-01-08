@@ -8,6 +8,6 @@ export const addHousesSuccess = (houses) => {
 export const isLoadingHouses = (bool) => {
   return {
     type: 'IS_LOADING_HOUSES',
-    bool
+    isLoading: bool
   }
 }

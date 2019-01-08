@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
-import housesReducer from './houses-reducer'
+import {houses, isLoadingHouses} from './houses-reducer'
 
 const rootReducer = combineReducers({
-  housesReducer
+  houses,
+  isLoadingHouses
 })
 
 export default rootReducer

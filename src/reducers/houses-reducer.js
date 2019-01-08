@@ -1,4 +1,4 @@
- const houses = (state=[], action) => {
+ export const houses = (state=[], action) => {
   switch(action.type) {
     case 'ADD_HOUSES_SUCCESS':
       return action.houses
@@ -7,4 +7,13 @@
   }
 }
 
-export default houses;
+export const isLoadingHouses = (state=false, action) => {
+  switch(action.type) {
+    case 'IS_LOADING_HOUSES':
+      return action.isLoading
+    default:
+      return state
+  }
+}
+
+// export default houses;
