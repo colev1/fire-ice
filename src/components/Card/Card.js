@@ -4,10 +4,10 @@ import '../../containers/App/App.css'
 export const Card = (props) => {
   const {name, seats, coatOfArms, founded, titles, word, weapons} = props.house;
   const displayTitles = titles.map(title => 
-    <p> Titles: {title} </p>
+    <p key={title}> Titles: {title} </p>
   )
   return (
-    <div className='Card'>
+    <div className='Card' key={name}>
       <h1> {name} </h1> 
       <h3> {word} </h3>
       <h4> Founded: {founded ? founded : 'N/A'} </h4>

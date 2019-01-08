@@ -10,10 +10,7 @@ import {Card} from '../../components/Card/Card';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  }
-
+  
   componentDidMount = () => {
     const url = 'http://localhost:3001/api/v1/houses'
     this.props.fetchHouses(url)
@@ -21,7 +18,7 @@ class App extends Component {
 
   render() {
     const cards = this.props.houses.map(house => (
-      <Card house={house}/>
+      <Card house={house} key={house.name}/>
     ))
 
     if(this.props.isLoadingHouses) {
@@ -46,23 +43,23 @@ class App extends Component {
         <div className='Display-info'>
           <div className='Container'> 
           {cards}
-
           </div>
         </div>
       </div>
-    );
+      );
     }
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   houses: state.houses,
   isLoadingHouses: state.isLoadingHouses
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   fetchHouses: (url) => dispatch(fetchHouses(url))
 })
+
 
 
 
