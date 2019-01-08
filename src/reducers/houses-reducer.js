@@ -1,4 +1,4 @@
- export const houses = (state=[], action) => {
+ export const housesReducer = (state=[], action) => {
   switch(action.type) {
     case 'ADD_HOUSES_SUCCESS':
       return action.houses

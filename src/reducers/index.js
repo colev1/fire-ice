@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import {houses, isLoadingHouses} from './houses-reducer'
+import {housesReducer, isLoadingHouses} from './houses-reducer'
 
 const rootReducer = combineReducers({
-  houses,
+  houses: housesReducer,
   isLoadingHouses
 })
 

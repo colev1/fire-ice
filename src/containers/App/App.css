@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: Androgyne;
-  background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+  /* background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png'); */
   position: absolute;
   left: 0;
   top: 0;
@@ -32,7 +32,7 @@
   transform: scale(1.5,1.5);
 }
 
-#wolf {
+.Wolf {
   height: 200px;
 }
 
